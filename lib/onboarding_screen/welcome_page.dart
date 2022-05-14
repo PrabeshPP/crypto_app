@@ -9,7 +9,9 @@ class WelcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+          
+      ),
       body: Container(
         height: size.height,
         width: size.width,
