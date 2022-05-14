@@ -23,12 +23,15 @@ class WelcomePage extends StatelessWidget {
           color: const Color.fromARGB(255, 71, 101, 249),
         ),
         Positioned(
+          top: size.height*0.12,
+          left: size.width*0.1,
           child: SizedBox(
-          height: size.height*0.3,
-          width: size.width*0.9,
-          child:SvgPicture.asset("assets/Image.svg",
-          fit: BoxFit.fill,) ,
-        ))
+            height: size.height*0.4,
+            width: size.width*0.8,
+            child: Image.asset("assets/cr.png",
+            fit: BoxFit.contain,),
+          ),
+         )
         ],
       ),
     );
