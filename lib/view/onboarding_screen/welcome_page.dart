@@ -31,7 +31,47 @@ class WelcomePage extends StatelessWidget {
             child: Image.asset("assets/cr.png",
             fit: BoxFit.contain,),
           ),
-         )
+         ),
+
+         Positioned(
+           top: size.height*0.53,
+           left: size.width*0.05,
+           child:
+         SizedBox(
+           height: size.height*0.3,
+           width: size.width*0.9,
+           child:Column(
+             crossAxisAlignment: CrossAxisAlignment.start,
+             children: [
+               SizedBox(
+                 height: size.height*0.3*0.4,
+                 width: size.width*0.5,
+                 child: Text(
+                   "Easy Way to Invest in crypto",
+                   style: Theme.of(context).textTheme.headline4!.copyWith(
+                     color: Colors.white,
+                     fontWeight: FontWeight.bold
+                   ),
+                 ),
+               ),
+               SizedBox(
+                 height: size.height*0.3*0.2,
+                 width: size.width*0.8,
+                 child: Text("A new way to manage and trade all your crypto easily and fastest in the market",
+                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                   color: Colors.white
+                 ),),
+
+               ),
+               Container(
+                 height: size.height*0.3*0.4,
+                 width: size.width*0.9,
+                 color: Colors.yellow,
+               ),
+               
+             ],
+           )
+         ))
         ],
       ),
     );
