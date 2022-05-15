@@ -69,26 +69,21 @@ class WelcomePage extends StatelessWidget {
                               .copyWith(color: Colors.white),
                         ),
                       ),
-                      Material(
-                        elevation: 20.0,
-                        clipBehavior: Clip.antiAlias,
-                        borderRadius: BorderRadius.circular(50.0),
-                        child: InkWell(
-                          borderRadius: BorderRadius.circular(50.0),
-                          onTap: (){
-                            
-                          },
-                          child: Ink(
-                            height: size.height * 0.3 * 0.25,
-                            width: size.width * 0.16,
-                            decoration:  BoxDecoration(
-                                color: Colors.white,borderRadius: BorderRadius.circular(50.0)),
-                            child: Center(
-                              child: Icon(
-                                CupertinoIcons.forward,
-                                color: const Color.fromARGB(255, 71, 101, 249),
-                                size: size.height * 0.05,
-                              ),
+                      SizedBox(
+                        height: size.height * 0.04,
+                      ),
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: size.height * 0.3 * 0.25,
+                          width: size.width * 0.16,
+                          decoration: const BoxDecoration(
+                              color: Colors.white, shape: BoxShape.circle),
+                          child: Center(
+                            child: Icon(
+                              CupertinoIcons.forward,
+                              color: const Color.fromARGB(255, 71, 101, 249),
+                              size: size.height * 0.05,
                             ),
                           ),
                         ),
