@@ -74,7 +74,12 @@ class WelcomePage extends StatelessWidget {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=>const HomePage(),),);
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomePage(),
+                            ),
+                          );
                         },
                         child: Container(
                           height: size.height * 0.3 * 0.25,
