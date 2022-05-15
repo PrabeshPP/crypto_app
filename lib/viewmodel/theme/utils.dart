@@ -5,9 +5,9 @@ class AppThemeData{
   static lightTheme()=>ThemeData(
     appBarTheme:const  AppBarTheme(
 systemOverlayStyle: SystemUiOverlayStyle(
-  statusBarBrightness: Brightness.light,
+  statusBarBrightness: Brightness.dark,
   statusBarColor: Colors.transparent,
-  statusBarIconBrightness: Brightness.light
+  statusBarIconBrightness: Brightness.dark
 )        
     )
   );

@@ -1,6 +1,6 @@
+import 'package:crypto_app/view/home/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({Key? key}) : super(key: key);
@@ -37,7 +37,7 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
           Positioned(
-              top: size.height * 0.53,
+              top: size.height * 0.58,
               left: size.width * 0.05,
               child: SizedBox(
                   height: size.height * 0.3,
@@ -73,7 +73,9 @@ class WelcomePage extends StatelessWidget {
                         height: size.height * 0.04,
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder:(context)=>const HomePage(),),);
+                        },
                         child: Container(
                           height: size.height * 0.3 * 0.25,
                           width: size.width * 0.16,
