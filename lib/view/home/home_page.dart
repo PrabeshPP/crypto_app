@@ -17,6 +17,7 @@ class HomePage extends StatelessWidget {
           elevation: 0.0,
           backgroundColor: Colors.transparent,
           title:   heading(context, size),
+         
         ),
       ),
       body: SafeArea(
@@ -32,6 +33,95 @@ class HomePage extends StatelessWidget {
                 body(const PortFolioWidget(), size)
               ],
             ),
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+
+      },child: const Icon(Icons.add,
+      ),),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      bottomNavigationBar: BottomAppBar(
+        shape:const CircularNotchedRectangle(),
+        notchMargin: 5.0,
+        child: SizedBox(
+          height: size.height*0.1,
+         
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  IconButton(onPressed: (){
+
+                  }, icon:Icon(Icons.home,
+                  size: size.height*0.03,),
+                  ),
+                  Text("Home",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+
+                  ),)
+                ],
+              ),
+               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  IconButton(onPressed: (){
+
+                  }, icon:Icon(Icons.line_axis,
+                  size: size.height*0.03,),
+                  ),
+                  Text("Market",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+
+                  ),)
+                ],
+              ),
+               Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  IconButton(onPressed: (){
+
+                  }, icon:Icon(Icons.notifications,
+                  size: size.height*0.03,),
+                  ),
+                   Text("notifications",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+
+                  ),)
+                ],
+              ),
+              
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  IconButton(onPressed: (){
+
+                  }, icon:Icon(Icons.settings,
+                  size: size.height*0.03,),
+                  ),
+                  Text("settings",
+                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
+
+                  ),)
+                ],
+              ),
+             
+            ],
           ),
         ),
       ),

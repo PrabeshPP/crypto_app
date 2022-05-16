@@ -62,57 +62,72 @@ Widget portfolio(Size size) {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: size.width*0.03),
+                padding: EdgeInsets.symmetric(horizontal: size.width * 0.03),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(data.name,
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
-                        ),),
-                        Text(data.shortForm,
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
-                        ),)
+                        Text(
+                          data.name,
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge!
+                              .copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          data.shortForm,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium!
+                              .copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                        )
                       ],
                     ),
                     SizedBox(
-                      height: size.height*0.07,
-                      width: size.width*0.07,
-                      child: Image.asset(data.icon,
-                      fit: BoxFit.contain,),
+                      height: size.height * 0.07,
+                      width: size.width * 0.07,
+                      child: Image.asset(
+                        data.icon,
+                        fit: BoxFit.contain,
+                      ),
                     )
                   ],
                 ),
               ),
-               Padding(
-                padding: EdgeInsets.symmetric(horizontal: size.width*0.03),
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: size.width * 0.03),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(data.totalAmout,
-                    style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold
-                    ),),
+                    Text(
+                      data.totalAmout,
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
                     Row(
                       children: [
-                        Text(data.percentage,
-                        style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
-                        ),),
-                        Icon(Icons.arrow_upward,
-                        color:const Color.fromARGB(255, 0, 255, 8),
-                        size: size.height*0.02,)
+                        Text(
+                          data.percentage,
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyMedium!
+                              .copyWith(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                        ),
+                        Icon(
+                          Icons.arrow_upward,
+                          color: const Color.fromARGB(255, 0, 255, 8),
+                          size: size.height * 0.02,
+                        )
                       ],
                     )
-                    
                   ],
                 ),
               )

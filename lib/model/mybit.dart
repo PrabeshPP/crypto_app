@@ -1,5 +1,3 @@
-
-
 class MyBitList {
   static List<MyBit> list = [
     MyBit("BitCoin", "BTC", "assets/bitcoin.png", "12,000", "2.35%"),
