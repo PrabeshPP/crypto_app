@@ -20,11 +20,9 @@ class BalanceCard extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-         
           children: [
             Padding(
-
-              padding:  EdgeInsets.only(top: size.height*0.01),
+              padding: EdgeInsets.only(top: size.height * 0.01),
               child: Container(
                 height: size.height * 0.12,
                 width: size.width * 0.26,
@@ -90,7 +88,7 @@ class BalanceCard extends StatelessWidget {
                         ),
                         Icon(
                           Icons.arrow_upward,
-                          color:const Color.fromARGB(255, 0, 255, 8),
+                          color: const Color.fromARGB(255, 0, 255, 8),
                           size: size.height * 0.02,
                         )
                       ],

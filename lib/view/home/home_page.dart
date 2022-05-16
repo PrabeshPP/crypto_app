@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'package:crypto_app/view/home/widgets/portfolio/portfolio.dart';
@@ -13,25 +12,24 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(0.0),
+        preferredSize:  Size.fromHeight(size.height*0.08),
         child: AppBar(
           elevation: 0.0,
           backgroundColor: Colors.transparent,
+          title:   heading(context, size),
         ),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
           child: SizedBox(
             height: size.height,
             width: size.width,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                heading(context, size),
                 body(const BalanceCard(), size),
                 body(const PortFolioWidget(), size)
-               
-               
               ],
             ),
           ),
@@ -43,8 +41,7 @@ class HomePage extends StatelessWidget {
 
 Widget heading(BuildContext context, Size size) {
   return Padding(
-    padding: EdgeInsets.only(
-        top: size.height * 0.01, left: size.width * 0.05),
+    padding: EdgeInsets.only(top: size.height * 0.01, left: size.width * 0.05),
     child: SizedBox(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,9 +63,9 @@ Widget heading(BuildContext context, Size size) {
   );
 }
 
-Widget body(Widget widgetChild,Size size) {
+Widget body(Widget widgetChild, Size size) {
   return Padding(
-      padding:
-          EdgeInsets.only(top: size.height * 0.02, left: size.width * 0.05),
-          child: widgetChild,);
+    padding: EdgeInsets.only(top: size.height * 0.02, left: size.width * 0.05),
+    child: widgetChild,
+  );
 }
