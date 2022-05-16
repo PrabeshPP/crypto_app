@@ -1,4 +1,3 @@
-import 'package:crypto_app/view/home/home_page.dart';
 import 'package:crypto_app/view/onboarding_screen/welcome_page.dart';
 import 'package:crypto_app/viewmodel/theme/utils.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const WelcomePage(),
       themeMode: ThemeMode.light,
       theme: AppThemeData.lightTheme(),
     );

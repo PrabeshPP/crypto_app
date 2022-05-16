@@ -17,7 +17,7 @@ class LastSeen extends StatelessWidget {
         var data = MyBitList.list[index];
         return Padding(
           padding: EdgeInsets.only(
-              top: size.height * 0.05,
+              top: size.height * 0.02,
               left: size.width * 0.05,
               right: size.width * 0.05),
           child: Container(
@@ -27,69 +27,59 @@ class LastSeen extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.0)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [Image.asset(data.icon,
-              height: size.height*0.1*0.8,width: size.width*0.1,
-              fit: BoxFit.contain,),
-              Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  data.icon,
+                  height: size.height * 0.1 * 0.8,
+                  width: size.width * 0.1,
+                  fit: BoxFit.contain,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      data.name,
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      data.shortForm,
+                      style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      data.price,
+                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    ),
+                    Row(
                       children: [
                         Text(
-                          data.name,
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge!
-                              .copyWith(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          data.shortForm,
+                          data.percentage,
                           style: Theme.of(context)
                               .textTheme
                               .bodyMedium!
                               .copyWith(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
+                        ),
+                        Icon(
+                          Icons.arrow_upward,
+                          color: const Color.fromARGB(255, 0, 255, 8),
+                          size: size.height * 0.02,
                         )
                       ],
                     ),
-                    Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          data.price,
-                          style: Theme.of(context)
-                              .textTheme
-                              .titleLarge!
-                              .copyWith(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              data.percentage,
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyMedium!
-                                  .copyWith(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                            ),
-                            Icon(
-                              Icons.arrow_upward,
-                              color: const Color.fromARGB(255, 0, 255, 8),
-                              size: size.height * 0.02,
-                            )
-                          ],
-                        ),
-                      ],
-                    )
+                  ],
+                )
               ],
-
             ),
-            
           ),
         );
       }),

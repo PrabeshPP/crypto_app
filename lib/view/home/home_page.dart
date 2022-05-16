@@ -1,4 +1,5 @@
 import 'package:crypto_app/view/home/widgets/last_Seen/lastSeen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'package:crypto_app/view/home/widgets/portfolio/portfolio.dart';
@@ -30,7 +31,9 @@ class HomePage extends StatelessWidget {
             Padding(
               padding:  EdgeInsets.only(left: size.width*0.05),
               child: Text("Last Seen",
-              style: Theme.of(context).textTheme.titleLarge,),
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                fontWeight:FontWeight.bold
+              ),),
             ),
             const LastSeen()
           ],
@@ -39,7 +42,7 @@ class HomePage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(
-          Icons.add,
+          CupertinoIcons.qrcode,
         ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
