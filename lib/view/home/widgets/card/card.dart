@@ -23,20 +23,15 @@ class BalanceCard extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(top: size.height * 0.01),
-              child: Container(
-                height: size.height * 0.12,
-                width: size.width * 0.26,
-                decoration: BoxDecoration(boxShadow: const [
-                  BoxShadow(
-                      color: Color.fromARGB(125, 126, 105, 105),
-                      offset: Offset(1.0, 3.0),
-                      blurRadius: 5.0),
-                ], borderRadius: BorderRadius.circular(50.0)),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50.0),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(50.0),
+
+                child: SizedBox.fromSize(
+                  size: Size.fromRadius(size.width*0.08),
                   child: Image.asset(
                     "assets/pp.png",
-                    fit: BoxFit.fill,
+                    fit: BoxFit.cover,
+                   
                   ),
                 ),
               ),

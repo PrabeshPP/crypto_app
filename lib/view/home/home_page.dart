@@ -1,3 +1,4 @@
+import 'package:crypto_app/view/home/widgets/last_Seen/lastSeen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:crypto_app/view/home/widgets/portfolio/portfolio.dart';
@@ -10,43 +11,47 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      extendBody: true,
       appBar: PreferredSize(
-        preferredSize:  Size.fromHeight(size.height*0.08),
+        preferredSize: Size.fromHeight(size.height * 0.08),
         child: AppBar(
           elevation: 0.0,
           backgroundColor: Colors.transparent,
-          title:   heading(context, size),
-         
+          title: heading(context, size),
         ),
       ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: SizedBox(
-            height: size.height,
-            width: size.width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                body(const BalanceCard(), size),
-                body(const PortFolioWidget(), size)
-              ],
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            body(const BalanceCard(), size),
+            body(const PortFolioWidget(), size),
+            Padding(
+              padding:  EdgeInsets.only(left: size.width*0.05),
+              child: Text("Last Seen",
+              style: Theme.of(context).textTheme.titleLarge,),
             ),
-          ),
+            const LastSeen()
+          ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){
-
-      },child: const Icon(Icons.add,
-      ),),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: const Icon(
+          Icons.add,
+        ),
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
-        shape:const CircularNotchedRectangle(),
+
+        shape: const CircularNotchedRectangle(
+
+        ),
+        
         notchMargin: 5.0,
         child: SizedBox(
-          height: size.height*0.1,
-         
+          height: size.height * 0.1,
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -55,72 +60,74 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  IconButton(onPressed: (){
-
-                  }, icon:Icon(Icons.home,
-                  size: size.height*0.03,),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.home,
+                      size: size.height * 0.03,
+                    ),
                   ),
-                  Text("Home",
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold
-
-                  ),)
+                  Text(
+                    "Home",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  )
                 ],
               ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  IconButton(onPressed: (){
-
-                  }, icon:Icon(Icons.line_axis,
-                  size: size.height*0.03,),
-                  ),
-                  Text("Market",
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold
-
-                  ),)
-                ],
-              ),
-               Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  IconButton(onPressed: (){
-
-                  }, icon:Icon(Icons.notifications,
-                  size: size.height*0.03,),
-                  ),
-                   Text("notifications",
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold
-
-                  ),)
-                ],
-              ),
-              
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  IconButton(onPressed: (){
-
-                  }, icon:Icon(Icons.settings,
-                  size: size.height*0.03,),
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.line_axis,
+                      size: size.height * 0.03,
+                    ),
                   ),
-                  Text("settings",
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold
-
-                  ),)
+                  Text(
+                    "Market",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  )
                 ],
               ),
-             
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.notifications,
+                      size: size.height * 0.03,
+                    ),
+                  ),
+                  Text(
+                    "notifications",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.settings,
+                      size: size.height * 0.03,
+                    ),
+                  ),
+                  Text(
+                    "settings",
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  )
+                ],
+              ),
             ],
           ),
         ),
